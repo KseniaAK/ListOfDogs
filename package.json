@@ -1,8 +1,8 @@
 {
-  "name": "renew-front-end-code-test",
+  "name": "list-of-Dogs",
   "private": true,
   "version": "0.0.1",
-  "description": "renew.com",
+  "description": "front end practice",
   "repository": "https://github.com/renewdotcom/code-tests",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "build": "npm run clean && cross-env NODE_ENV=production npm run webpack -- --env.browser && NODE_ENV=production npm run webpack -- --env.server",
     "webpack": "webpack --colors --display-error-details --config ./webpack/webpack.config.js"
   },
-  "author": "Renew, Inc.",
+  "author": "",
   "license": "UNLICENSED",
   "devDependencies": {
     "babel-eslint": "^7.2.1",
