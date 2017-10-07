@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { connect } from 'react-redux';
 
-import SampleComponenet from 'components/sample'
+import SampleComponent from 'components/sample'
 import * as sampleActions from 'actions/sample';
 import styles from './scss/sample.scss';
 
@@ -15,7 +15,7 @@ class SampleContainer extends Component {
     return (
       <div className={cx('sample-container')}>
         <h1>This is a sample container</h1>
-        <SampleComponenet
+        <SampleComponent
           title={title}
           onClick={updateTitleAction}
         />
