@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import sample from 'reducers/sample';
+import breedsReducer from './breedsReducer'
 
 const rootReducer = combineReducers({
-  sample,
+  breeds: breedsReducer,
 });
 
-export default rootReducer;
+export default rootReducer
