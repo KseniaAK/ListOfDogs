@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-// import classNames from 'classnames/bind'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { bindActionCreators } from 'redux'
+import classNames from 'classnames/bind'
 
 import { changeBreeds } from '../actions/index'
 import BreedButton from '../components/BreedButton'
+import styles from './scss/ResultsText'
 
-// const cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 class ResultsText extends Component {
   componentDidMount() {
@@ -25,7 +26,7 @@ class ResultsText extends Component {
       return <BreedButton breedName={breed} key={i} />
     })
     return (
-      <div>
+      <div className={cx('results-text')}>
         { dogs }
       </div>
     )
