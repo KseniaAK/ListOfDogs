@@ -3,4 +3,9 @@
 * option - #f1f1f1
 * body background - #f9f9f9
 **/
-.base-page {}
+.base-page {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+}
