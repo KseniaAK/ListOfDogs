@@ -7,7 +7,7 @@ import classNames from 'classnames/bind'
 
 import { changeBreeds } from '../actions/index'
 import BreedButton from '../components/BreedButton'
-import styles from './scss/ResultsText'
+import styles from './scss/results-text'
 
 const cx = classNames.bind(styles)
 
