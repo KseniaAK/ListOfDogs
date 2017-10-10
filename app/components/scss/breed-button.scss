@@ -1,0 +1,22 @@
+$font-stack: "Calibri", sans-serif;
+$font-color: #450B55;
+
+.breed-button {
+  color: $font-color;
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px;
+  width: 20%;
+  background-color: #BF8DE9;
+  margin: 10px;
+  text-align: center;
+  font-family: $font-stack;
+
+  &__data {
+    font-size: 18px;
+    color: #217C28;
+  }
+  &__button {
+    color: blue;
+  }
+}
