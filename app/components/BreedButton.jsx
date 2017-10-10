@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+import classNames from 'classnames/bind';
+import styles from './scss/breedButton';
+const cx = classNames.bind(styles);
+
 class BreedButton extends Component {
   constructor(props) {
     super(props)
@@ -7,7 +11,7 @@ class BreedButton extends Component {
 
   render() {
     return (
-      <div className='breed-button'>
+      <div className={cx('breed-button')}>
         { this.props.breedName }
       </div>
     )
