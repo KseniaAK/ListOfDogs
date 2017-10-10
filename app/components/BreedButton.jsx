@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import classNames from 'classnames/bind';
-import styles from './scss/breedButton';
-const cx = classNames.bind(styles);
+import classNames from 'classnames/bind'
+import styles from './scss/breed-button'
+
+const cx = classNames.bind(styles)
 
 class BreedButton extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
-      <div className={cx('breed-button')}>
+      <div className={cx('breed-button')} onClick={this.props.selectBreed}>
         { this.props.breedName }
       </div>
     )
   }
 }
 
-export default BreedButton
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectBreed }, dispatch)
+}
+
+export default connect(mapDispatchToProps)(BreedButton)
