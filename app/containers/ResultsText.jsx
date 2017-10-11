@@ -15,7 +15,12 @@ class ResultsText extends Component {
   }
 
   render() {
-    const dogs = this.props.breeds.breeds.map((breed, i) => {
+    if (this.props.textSearchResults.isFetching) {
+      return (
+        <div className={cx('results-text', 'loading')}>Loading...</div>
+      )
+    }
+    const dogs = this.props.textSearchResults.breeds.map((breed, i) => {
       return <BreedButton breedName={breed} key={i} />
     })
     return (
@@ -26,8 +31,8 @@ class ResultsText extends Component {
   }
 }
 
-function mapStateToProps({ breeds }) {
-  return { breeds }
+function mapStateToProps({ textSearchResults }) {
+  return { textSearchResults }
 }
 
 function mapDispatchToProps(dispatch) {
