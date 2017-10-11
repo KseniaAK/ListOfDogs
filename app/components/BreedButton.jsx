@@ -12,7 +12,6 @@ class BreedButton extends Component {
   constructor(props) {
     super(props)
     this.startFetchingPics = this.startFetchingPics.bind(this)
-    console.log(this)
   }
   
   startFetchingPics() {
