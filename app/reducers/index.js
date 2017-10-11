@@ -6,7 +6,7 @@ import singleBreedReducer from './singleBreedReducer'
 import picsReducer from './picsReducer'
 
 const rootReducer = combineReducers({
-  breeds: breedsReducer,
+  textSearchResults: breedsReducer,
   title: titleReducer,
   selectedBreed: singleBreedReducer,
   pics: picsReducer,
