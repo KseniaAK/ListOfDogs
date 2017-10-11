@@ -4,13 +4,24 @@ import { connect } from 'react-redux'
 
 import classNames from 'classnames/bind'
 import styles from './scss/breed-button'
+import { fetchPics } from '../actions/index'
 
 const cx = classNames.bind(styles)
 
 class BreedButton extends Component {
+  constructor(props) {
+    super(props)
+    this.startFetchingPics = this.startFetchingPics.bind(this)
+    console.log(this)
+  }
+  
+  startFetchingPics() {
+    this.props.fetchPics(this.props.breedName)
+  }
+  
   render() {
     return (
-      <div className={cx('breed-button')} onClick={this.props.selectBreed}>
+      <div className={cx('breed-button')} onClick={this.startFetchingPics}>
         { this.props.breedName }
       </div>
     )
@@ -18,7 +29,7 @@ class BreedButton extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ selectBreed }, dispatch)
+  return bindActionCreators({ fetchPics }, dispatch)
 }
 
-export default connect(mapDispatchToProps)(BreedButton)
+export default connect(null, mapDispatchToProps)(BreedButton)
