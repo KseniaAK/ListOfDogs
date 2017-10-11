@@ -17,14 +17,16 @@ class ResultsText extends Component {
   render() {
     if (this.props.textSearchResults.isFetching) {
       return (
-        <div className={cx('results-text', 'loading')}>Loading...</div>
+        <div className={cx('results-text', 'loading')}>
+          <div>Loading...</div>
+        </div>
       )
     }
     const dogs = this.props.textSearchResults.breeds.map((breed, i) => {
       return <BreedButton breedName={breed} key={i} />
     })
     return (
-      <div className={cx('results-text')}>
+      <div className={cx('results-text', 'has-data')}>
         { dogs }
       </div>
     )
