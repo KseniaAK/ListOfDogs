@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import classNames from 'classnames/bind'
 
-// import SampleContainer from 'containers/SampleContainer';
 import ResultsText from 'containers/resultsText'
+import ResultsPics from 'containers/resultsPics'
 import Title from 'components/title'
+import styles from './scss/base-page'
 
-import classNames from 'classnames/bind';
-import styles from './scss/base-page';
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 function BasePage() {
   return (
     <div className={cx('base-page')}>
       <Title />
       <ResultsText />
+      <ResultsPics />
     </div>
- );
+ )
 }
 
-export default BasePage;
+export default BasePage

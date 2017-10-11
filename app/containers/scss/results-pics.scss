@@ -1,0 +1,21 @@
+$font-stack: "Calibri", sans-serif;
+$font-color: #450B55;
+
+.results-pics {
+  display: flex;
+  background-color: white;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  
+  &.loading {
+    font-family: $font-stack;
+    color: $font-color;
+    font-size: 18px;
+    justify-content: center;
+  }
+  
+  &.has-data {
+    justify-content: space-between;
+  }
+}
