@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
   textSearchResults: breedsReducer,
   title: titleReducer,
   selectedBreed: singleBreedReducer,
-  pics: picsReducer,
+  pictureSearchResults: picsReducer,
 });
 
 export default rootReducer
