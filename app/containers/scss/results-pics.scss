@@ -16,6 +16,12 @@ $font-color: #450B55;
   }
   
   &.has-data {
-    justify-content: space-between;
+    justify-content: space-around;
+
+    .each-pic {
+      width: auto;
+      height: 200px;
+      margin: 10px;
+    }
   }
 }
