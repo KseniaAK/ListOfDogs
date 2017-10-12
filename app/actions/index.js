@@ -1,18 +1,10 @@
 import axios from 'axios'
 
-export const CHANGE_BREEDS = 'CHANGE_BREEDS'
 export const SELECT_BREED = 'SELECT_BREED'
 export const REQUEST_PICS = 'REQUEST_PICS'
 export const RECEIVE_PICS = 'RECEIVE_PICS'
 export const RECEIVE_ALL_BREEDS = 'RECEIVE_ALL_BREEDS'
 export const REQUEST_ALL_BREEDS = 'REQUEST_ALL_BREEDS'
-
-export const changeBreeds = (breeds) => {
-  return {
-    type: CHANGE_BREEDS,
-    breeds,
-  }
-}
 
 export const selectBreed = (breed) => {
   return {
