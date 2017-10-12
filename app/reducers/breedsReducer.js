@@ -14,12 +14,9 @@ export default function(state = {
       })
       
     case RECEIVE_ALL_BREEDS:
-      const firstTwelveBreeds = Object.keys(action.breeds).map((breed) => {
-        return breed.charAt(0).toUpperCase() + breed.slice(1)
-      }).slice(0, 12)
       return Object.assign({}, state, {
         isFetching: false,
-        breeds: firstTwelveBreeds
+        breeds: action.breeds
       })
     
     default:
