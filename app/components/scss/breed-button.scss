@@ -12,11 +12,8 @@ $font-color: #450B55;
   text-align: center;
   font-family: $font-stack;
 
-  &__data {
-    font-size: 18px;
-    color: #217C28;
-  }
-  &__button {
-    color: blue;
+  &.clicked {
+    background-color: #8989FC;
+    box-shadow: 2px 2px 5px;
   }
 }
