@@ -8,6 +8,8 @@ const cx = classNames.bind(styles)
 
 class ResultsPics extends Component {
   render() {
+    if (!this.props.pictureSearchResults.show) return null
+    
     if (this.props.pictureSearchResults.isFetching) {
       return (
         <div>
@@ -20,7 +22,7 @@ class ResultsPics extends Component {
 
     for (let i = 0; i < 12; i++) {
       const pic = this.props.pictureSearchResults.pics[i]
-      pics.push(<img src={`${pic}`} />)
+      pics.push(<img src={`${pic}`} key={i} className={cx('each-pic')} />)
     }
 
     return (
