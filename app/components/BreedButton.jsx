@@ -11,9 +11,6 @@ const cx = classNames.bind(styles)
 class BreedButton extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      isClicked: false
-    }
     this.startFetchingPics = this.startFetchingPics.bind(this)
   }
   
@@ -24,7 +21,7 @@ class BreedButton extends Component {
   
   render() {
     return (
-      <div className={cx('breed-button', (this.state.isClicked ? 'clicked' : null))} onClick={this.startFetchingPics}>
+      <div className={cx('breed-button', (this.props.isSelected ? 'clicked' : null))} onClick={this.startFetchingPics}>
         { this.props.breedName }
       </div>
     )
