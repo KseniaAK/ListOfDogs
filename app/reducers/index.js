@@ -2,13 +2,13 @@ import { combineReducers } from 'redux'
 
 import breedsReducer from './breedsReducer'
 import titleReducer from './titleReducer'
-import singleBreedReducer from './singleBreedReducer'
+import breedsToDisplayReducer from './breedsToDisplayReducer'
 import picsReducer from './picsReducer'
 
 const rootReducer = combineReducers({
   textSearchResults: breedsReducer,
   title: titleReducer,
-  selectedBreed: singleBreedReducer,
+  displayedBreeds: breedsToDisplayReducer,
   pictureSearchResults: picsReducer,
 });
 

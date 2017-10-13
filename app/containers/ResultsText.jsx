@@ -24,15 +24,13 @@ class ResultsText extends Component {
       )
     }
 
-    const dogs = []
-    const breedResults = Object.keys(this.props.textSearchResults.breeds).map((breed) => breed)
-    
-    for (let i = 0; i < NUM_OF_BREEDS; i++) {
-      // break out if there are less that 12 breeds
-      if (!breedResults[i]) break
-      let breed = breedResults[i].charAt(0).toUpperCase() + breedResults[i].slice(1)
-      dogs.push(<BreedButton breedName={breed} key={i} />)
-    }
+    const dogs = Object.keys(this.props.displayedBreeds).map((breed, i) => {
+      return <BreedButton 
+        breedName={breed} 
+        isSelected={this.props.displayedBreeds[breed].isSelected} 
+        key={i} 
+      />
+    })
 
     return (
       <div className={cx('results-text', 'has-data')}>
@@ -42,8 +40,8 @@ class ResultsText extends Component {
   }
 }
 
-function mapStateToProps({ textSearchResults }) {
-  return { textSearchResults }
+function mapStateToProps({ textSearchResults, displayedBreeds }) {
+  return { textSearchResults, displayedBreeds }
 }
 
 function mapDispatchToProps(dispatch) {
