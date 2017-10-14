@@ -4,11 +4,10 @@ import { bindActionCreators } from 'redux'
 import classNames from 'classnames/bind'
 
 import { fetchAllBreeds } from '../actions/index'
-import BreedButton from '../components/BreedButton'
+import BreedButton from '../containers/BreedButton'
 import styles from './scss/results-text'
 
 const cx = classNames.bind(styles)
-const NUM_OF_BREEDS = 12
 
 class ResultsText extends Component {
   componentDidMount() {
