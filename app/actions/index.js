@@ -7,6 +7,8 @@ export const RECEIVE_ALL_BREEDS = 'RECEIVE_ALL_BREEDS'
 export const REQUEST_ALL_BREEDS = 'REQUEST_ALL_BREEDS'
 export const DISPLAY_CHUNK = 'DISPLAY_CHUNK'
 
+const NUM_OF_BREEDS = 12
+
 const selectBreed = (breedToSelect) => {
   return {
     type: SELECT_BREED,
@@ -47,7 +49,7 @@ export const fetchAllBreeds = () => {
       .then(res => {
         const breeds = res.data.message
         dispatch(receiveAllBreeds(breeds))
-        dispatch(displayChunk(breeds, 0, 12))
+        dispatch(displayChunk(breeds, 0, NUM_OF_BREEDS))
       })
   }
 }
