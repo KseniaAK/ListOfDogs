@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import classNames from 'classnames/bind'
 
-import ResultsText from 'containers/resultsText'
-import ResultsPics from 'containers/resultsPics'
 import Title from 'components/title'
+import SearchBar from 'containers/SearchBar'
+import ResultsText from 'containers/ResultsText'
+import ResultsPics from 'containers/ResultsPics'
 import styles from './scss/base-page'
 
 const cx = classNames.bind(styles)
@@ -11,7 +12,10 @@ const cx = classNames.bind(styles)
 function BasePage() {
   return (
     <div className={cx('base-page')}>
-      <Title />
+      <div className={cx('container-title-and-search')}>
+        <Title />
+        <SearchBar />
+      </div>
       <ResultsText />
       <ResultsPics />
     </div>
