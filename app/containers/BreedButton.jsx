@@ -16,7 +16,6 @@ class BreedButton extends Component {
   
   startFetchingPics() {
     this.props.fetchPics(this.props.breedName)
-    this.setState({isClicked: true})
   }
   
   render() {
