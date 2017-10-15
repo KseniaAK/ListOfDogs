@@ -6,6 +6,7 @@ export const RECEIVE_PICS = 'RECEIVE_PICS'
 export const RECEIVE_ALL_BREEDS = 'RECEIVE_ALL_BREEDS'
 export const REQUEST_ALL_BREEDS = 'REQUEST_ALL_BREEDS'
 export const DISPLAY_CHUNK = 'DISPLAY_CHUNK'
+export const READ_USER_INPUT = 'READ_USER_INPUT'
 
 const NUM_OF_BREEDS = 12
 
@@ -73,5 +74,12 @@ const displayChunk = (breeds, begin, end) => {
     breeds,
     begin,
     end
+  }
+}
+
+export const readUserInput = (letter) => {
+  return {
+    type: READ_USER_INPUT,
+    input: letter
   }
 }
