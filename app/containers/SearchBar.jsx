@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import classNames from 'classnames/bind'
 
-import { readUserInput } from '../actions/index'
+import { handleUserSearch } from '../actions/index'
 import BreedButton from '../containers/BreedButton'
 import styles from './scss/results-text'
 
@@ -17,7 +17,7 @@ class SearchBar extends Component {
   }
 
   handleChange(event) {
-    this.props.readUserInput(event.target.value)
+    this.props.handleUserSearch(event.target.value)
   }
 
   render() {
@@ -32,7 +32,7 @@ function mapStateToProps({ searchInput }) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ readUserInput }, dispatch)
+  return bindActionCreators({ handleUserSearch }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar)
