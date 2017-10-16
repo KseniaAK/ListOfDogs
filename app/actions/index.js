@@ -1,4 +1,8 @@
 import axios from 'axios'
+import {
+  getFromLocalStorage,
+  putInLocalStorage
+} from './helperFunctions/localStorageActions'
 
 export const SELECT_BREED = 'SELECT_BREED'
 export const REQUEST_PICS = 'REQUEST_PICS'
@@ -49,6 +53,7 @@ export const fetchAllBreeds = () => {
     return axios.get('https://dog.ceo/api/breeds/list/all')
       .then(res => {
         const breeds = res.data.message
+        putInLocalStorage(Object.keys(breeds).map((breed) => breed))
         dispatch(receiveAllBreeds(breeds))
         dispatch(displayChunk(breeds, 0, NUM_OF_BREEDS))
       })
@@ -77,9 +82,9 @@ const displayChunk = (breeds, begin, end) => {
   }
 }
 
-export const readUserInput = (letter) => {
+export const readUserInput = (searchValue) => {
   return {
     type: READ_USER_INPUT,
-    input: letter
+    searchValue
   }
 }
