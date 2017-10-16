@@ -1,6 +1,7 @@
 import {
   SELECT_BREED,
-  DISPLAY_CHUNK
+  DISPLAY_CHUNK,
+  DISPLAY_SEARCH_RESULTS
 } from '../actions/index'
 
 export default function(state = {}, action) {
@@ -17,15 +18,20 @@ export default function(state = {}, action) {
       })
       return cleanState
       
+    case DISPLAY_SEARCH_RESULTS:
+      return Object.assign({}, getBreedsFromRange(action))
+    
     default: 
       return state
   }
 }
 
+
+// there is a certain number of breeds we need to display, range given by the action
+// TODO: already pass 12 breeds to the reducer
 function getBreedsFromRange(action) {
   const breedsToDisplay = {}
   const allBreeds = getAllBreeds(action.breeds)
-  
   for (let i = action.begin; i < action.end; i++) {
     // break out if there are less breeds than desired
     if (!allBreeds[i]) break
@@ -40,6 +46,7 @@ function getBreedsFromRange(action) {
   return breedsToDisplay
 }
 
+// some breeds have an array of options, e.g. {setter: [english, irish]}
 function hasOptions(action, breedName) {
   return action.breeds[breedName].length > 0
 }
