@@ -3,24 +3,25 @@ $font-color: #450B55;
 
 .results-pics {
   display: flex;
+  flex-direction: column;
   background-color: white;
   flex-wrap: wrap;
-  width: 100%;
+  height: 40em;
   margin: auto;
+  justify-content: flex-start;
   
   &.loading {
     font-family: $font-stack;
     color: $font-color;
     font-size: 18px;
-    justify-content: center;
   }
   
   &.has-data {
-    justify-content: space-around;
+    align-content: center;
 
     .each-pic {
-      width: auto;
-      height: 200px;
+      object-fit: contain;
+      max-width: 200px;
       margin: 10px;
     }
   }
