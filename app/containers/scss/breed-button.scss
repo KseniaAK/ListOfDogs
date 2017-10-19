@@ -3,17 +3,18 @@ $font-color: #450B55;
 
 .breed-button {
   color: $font-color;
-  border: 0px;
-  border-radius: 4px;
-  padding: 10px;
+  border: 0;
+  border-radius: 0.4em;
+  padding: 0.75em;
   width: 20%;
+  min-width: 10em;
   background-color: #BF8DE9;
-  margin: 10px;
+  margin: 0.5em;
   text-align: center;
   font-family: $font-stack;
 
   &.clicked {
     background-color: #8989FC;
-    box-shadow: 2px 2px 5px;
+    box-shadow: 0.2em 0.2em 0.5em;
   }
 }
