@@ -3,12 +3,11 @@ $font-color: #450B55;
 
 .results-pics {
   // display: flex;
-  background-color: rgb(192, 239, 253);
   margin: auto;
-  width: 50em;
-  columns: 4;
-
+  text-align: center;
+  
   &.loading {
+    width: 100%;
     font-family: $font-stack;
     color: $font-color;
     font-size: 1.5em;
@@ -23,11 +22,14 @@ $font-color: #450B55;
     // justify-content: flex-start;
     // flex-wrap: wrap;
     // max-height: 40em;
+    width: 58em;
+    columns: 5;
+    background-color: rgb(192, 239, 253);
     
     .each-pic {
       object-fit: contain;
       max-width: 10em;
-      margin: 1em;
+      margin: 1em auto;
     }
   }
 }
