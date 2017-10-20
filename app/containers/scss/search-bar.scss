@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.search-bar {
+  font-family: $font-stack;
+  font-size: $font-size;
+  height: 1.4em;
+  padding: 0.2em;
+  
+  &:focus {
+    outline: $app-color-highlight auto 0.2em;
+  }
+}

@@ -1,20 +1,19 @@
-$font-stack: "Calibri", sans-serif;
-$font-color: #450B55;
+@import '../../styles/variables';
 
 .breed-button {
-  color: $font-color;
+  color: $font-color-main;
   border: 0;
   border-radius: 0.4em;
   padding: 0.75em;
   width: 20%;
   min-width: 10em;
-  background-color: #BF8DE9;
+  background-color: $app-color-main;
   margin: 0.5em;
   text-align: center;
   font-family: $font-stack;
 
   &.clicked {
-    background-color: #8989FC;
+    background-color: $app-color-highlight;
     box-shadow: 0.2em 0.2em 0.5em;
   }
 }

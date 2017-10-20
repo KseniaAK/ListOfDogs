@@ -1,17 +1,15 @@
-$font-stack: "Calibri", sans-serif;
-$font-color: #450B55;
+@import '../../styles/variables';
 
 .results-text {
   display: flex;
-  background-color: white;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
   
   &.loading {
     font-family: $font-stack;
-    color: $font-color;
-    font-size: 1.5em;
+    color: $font-color-main;
+    font-size: $font-size-large;
     justify-content: center;    
   }
   

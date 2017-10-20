@@ -1,29 +1,19 @@
-$font-stack: "Calibri", sans-serif;
-$font-color: #450B55;
+@import '../../styles/variables';
 
 .results-pics {
-  // display: flex;
   margin: auto;
   text-align: center;
   
-  &.loading {
+  &.loading, &.no-pics {
     width: 100%;
     font-family: $font-stack;
-    color: $font-color;
-    font-size: 1.5em;
-    // flex-direction: row;
-    // justify-content: center;
+    color: $font-color-main;
+    font-size: $font-size-large;
   }
   
   &.has-data {
-    // flex-direction: column;
-    // align-items: center;
-    // align-content: flex-start; 
-    // justify-content: flex-start;
-    // flex-wrap: wrap;
-    // max-height: 40em;
     width: 58em;
-    columns: 5;
+    columns: $num-of-columns;
     background-color: rgb(192, 239, 253);
     
     .each-pic {
