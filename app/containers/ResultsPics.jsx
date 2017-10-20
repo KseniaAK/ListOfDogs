@@ -13,15 +13,21 @@ class ResultsPics extends Component {
     
     if (this.props.pictureSearchResults.isFetching) {
       return (
-        <div>
           <div className={cx('results-pics', 'loading')}>Loading...</div>
-        </div>
       )
     }
 
     const pics = []
-
+    console.log(this.props.pictureSearchResults.pics)
+    if (!Array.isArray(this.props.pictureSearchResults.pics)) {
+      return (
+        <div className={cx('results-pics', 'no-pics')}>
+          Looks like no pictures of this breed are available!
+        </div>
+      )
+    } 
     for (let i = 0; i < NUM_OF_BREEDS; i++) {
+      if (!this.props.pictureSearchResults.pics[i]) break
       const pic = this.props.pictureSearchResults.pics[i]
       pics.push(<img src={`${pic}`} key={i} className={cx('each-pic')} />)
     }
