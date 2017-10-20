@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 
 import { handleUserSearch } from '../actions/index'
 import BreedButton from '../containers/BreedButton'
-import styles from './scss/results-text'
+import styles from './scss/search-bar'
 
 const cx = classNames.bind(styles)
 
@@ -22,7 +22,12 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <input value={this.props.searchInput} onChange={this.handleChange} placeholder='Search breeds' />
+      <input 
+        className={cx('search-bar')} 
+        value={this.props.searchInput} 
+        onChange={this.handleChange} 
+        placeholder='Search breeds' 
+      />
     )
   }
 }
